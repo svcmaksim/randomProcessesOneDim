@@ -64,14 +64,31 @@ void writeTrajextoryToStream( trajectory_t &tr, std::ostream &str )
                tr[i].second << std::endl;
 }
 
+void getMeanTrajectory( const std::vector<trajectory_t> &trajectories, trajectory_t &mean )
+{
+    for( size_t i = 0; i < mean.size(); ++i )
+    {
+        mean[i].second = 0;
+        for( size_t j = 0; j < trajectories.size(); ++j )
+        {
+            mean[i].first = trajectories[j][i].first;
+            mean[i].second += trajectories[j][i].second / trajectories.size();
+        }
+    }
+}
+
 int main( int argc, char** argv )
 {
-    if( argc != 4 )
+    if( argc != 5 )
         throw std::logic_error( "bad params" );
 
     const size_t NUM_OF_TRAJECTORIES = atoi( argv[1] );//20;
     const double_t n_param = strtod( argv[2], nullptr );
     const double_t x0 = strtod( argv[3], nullptr );
+    const std::string meanName = argv[4];
+
+    if( NUM_OF_TRAJECTORIES % 1000 )
+        throw std::logic_error( "number of trajectories must has 1000 as devide" );
 
     std::cout << "x0 = " << x0 << "\t n = " << n_param << std::endl;
 
@@ -95,33 +112,30 @@ int main( int argc, char** argv )
     //    return sqrt(fabs(X));
     //};*/
 
-    std::vector<trajectory_t> trajectories;
-    for( size_t i = 0; i < NUM_OF_TRAJECTORIES; ++i )
+    std::vector<trajectory_t> trajectories(1000);
+    std::vector<trajectory_t> means( NUM_OF_TRAJECTORIES / 1000, trajectory_t( 10000 ) );
+    for( size_t i = 1; i <= NUM_OF_TRAJECTORIES; ++i )
     {
-        std::fstream fStream( "res_5" + std::to_string( i ) + ".csv", std::ios::out );
+        //std::fstream fStream( "res_5" + std::to_string( i ) + ".csv", std::ios::out );
         trajectory_t tr = getTrajectory(
                     0,
                     2,
                     a_func,
                     b_func,
                     pow( x0, n_param ),
-                    1000
+                    10000
                     );
-        trajectories.push_back( tr );
-        writeTrajextoryToStream( tr, fStream );
+        trajectories[(i-1) % 1000] = tr;
+        if( i > 0 && !(i % 1000) )
+            getMeanTrajectory( trajectories, means[ i / 1000 - 1] );
+
+        //writeTrajextoryToStream( tr, fStream );
     }
 
-    trajectory_t mean( 1000 );
+    trajectory_t mean( 10000 );
+    getMeanTrajectory( means, mean );
 
-    for( size_t i = 0; i < 1000; ++i )
-    {
-        mean[i].first = 0.002 * i;
-        mean[i].second = 0;
-        for( size_t j = 0; j < trajectories.size(); ++j )
-            mean[i].second += trajectories[j][i].second / trajectories.size();
-    }
-
-    std::fstream meanStr( "mean5.csv", std::ios::out );
+    std::fstream meanStr( "mean" + meanName + ".csv", std::ios::out );
 
     writeTrajextoryToStream( mean, meanStr );
 
