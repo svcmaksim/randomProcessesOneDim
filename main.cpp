@@ -94,7 +94,7 @@ int main( int argc, char** argv )
 
     auto a_func = [&]( double_t t, double_t X ) -> double_t
     {
-        return -2. * X / n_param;
+        return (n_param == 1) ? -X : -2. * X / n_param;
     };
 
     auto b_func = [&]( double_t t, double_t X ) -> double_t
