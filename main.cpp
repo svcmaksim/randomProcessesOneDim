@@ -94,12 +94,12 @@ int main( int argc, char** argv )
 
     auto a_func = [&]( double_t t, double_t X ) -> double_t
     {
-        return -3./2. * X / n_param;
+        return -2. * X / n_param;
     };
 
     auto b_func = [&]( double_t t, double_t X ) -> double_t
     {
-        return ( n_param > 1 ) ? X  / sqrt( n_param * (n_param - 1) ) : 1;
+        return ( n_param > 1 ) ? X * sqrt( 2. / (n_param * (n_param - 1) ) ) : 1;
     };
 
     //auto a_func = [&]( double_t t, double_t X ) -> double_t
