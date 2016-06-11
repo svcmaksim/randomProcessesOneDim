@@ -99,7 +99,7 @@ int main( int argc, char** argv )
 
     auto b_func = [&]( double_t t, double_t X ) -> double_t
     {
-        return X  / sqrt( n_param /* * (n_param - 1) */);
+        return ( n_param > 1 ) ? X  / sqrt( n_param * (n_param - 1) ) : 1;
     };
 
     //auto a_func = [&]( double_t t, double_t X ) -> double_t
