@@ -79,20 +79,26 @@ void getMeanTrajectory( const std::vector<trajectory_t> &trajectories, trajector
 
 int main( int argc, char** argv )
 {
-    if( argc != 5 )
-        throw std::logic_error( "bad params" );
+    //if( argc != 5 )
+    //    throw std::logic_error( "bad params" );
 
-    const size_t NUM_OF_TRAJECTORIES = atoi( argv[1] );//20;
-    const double_t n_param = strtod( argv[2], nullptr );
-    const double_t x0 = strtod( argv[3], nullptr );
-    const std::string meanName = argv[4];
+    //const size_t NUM_OF_TRAJECTORIES = atoi( argv[1] );//20;
+    //const double_t n_param = strtod( argv[2], nullptr );
+    //const double_t x0 = strtod( argv[3], nullptr );
+    //const std::string meanName = argv[4];
 
-    if( NUM_OF_TRAJECTORIES % 1000 )
-        throw std::logic_error( "number of trajectories must has 1000 as devide" );
+    //if( NUM_OF_TRAJECTORIES % 1000 )
+    //    throw std::logic_error( "number of trajectories must has 1000 as devide" );
 
-    std::cout << "x0 = " << x0 << "\t n = " << n_param << std::endl;
-
-    auto a_func = [&]( double_t t, double_t X ) -> double_t
+    //std::cout << "x0 = " << x0 << "\t n = " << n_param << std::endl;
+	const size_t NUM_OF_TRAJECTORIES = 10000;
+	double_t n_param_begin = 1.;
+	double_t n_param_end = 7.;
+	size_t numExperiments = 100;
+	double_t n_param = n_param_begin;	
+	const double_t x0 = 1.5;	
+	
+	auto a_func = [&]( double_t t, double_t X ) -> double_t
     {
         return (n_param == 1) ? -X : -2. * X / n_param;
     };
@@ -101,43 +107,55 @@ int main( int argc, char** argv )
     {
         return ( n_param > 1 ) ? X * sqrt( 2. / (n_param * (n_param - 1) ) ) : 1;
     };
+	
+	trajectory_t difference( numExperiments, std::make_pair( n_param_begin, 0 ) );
+	
+	for( size_t curN = 0; curN < numExperiments; ++curN )
+	{
+		n_param = n_param_begin + (n_param_end - n_param_begin) / numExperiments * curN;
+		
+		std::vector<trajectory_t> trajectories(1000);
+		std::vector<trajectory_t> means( NUM_OF_TRAJECTORIES / 1000, trajectory_t( 10000 ) );
+		
+		for( size_t i = 1; i <= NUM_OF_TRAJECTORIES; ++i )
+		{
+			//std::fstream fStream( "res_5" + std::to_string( i ) + ".csv", std::ios::out );
+			trajectory_t tr = getTrajectory(
+						0,
+						2,
+						a_func,
+						b_func,
+						pow( x0, n_param ),
+						10000
+						);
+			trajectories[(i-1) % 1000] = tr;
+			if( i > 0 && !(i % 1000) )
+				getMeanTrajectory( trajectories, means[ i / 1000 - 1] );
 
-    //auto a_func = [&]( double_t t, double_t X ) -> double_t
-    //{
-    //    return (-t /*- 2.0*/) * X / (1 + pow((/*2.0 -*/ t), 2)) - (X >= 0) ? 1. : -1.;
-    //};
+			//writeTrajextoryToStream( tr, fStream );
+		}
 
-    //auto b_func = [&]( double_t t, double_t X ) -> double_t
-    //{
-    //    return sqrt(fabs(X));
-    //};*/
+		trajectory_t mean( 10000 );
+		getMeanTrajectory( means, mean );
 
-    std::vector<trajectory_t> trajectories(1000);
-    std::vector<trajectory_t> means( NUM_OF_TRAJECTORIES / 1000, trajectory_t( 10000 ) );
-    for( size_t i = 1; i <= NUM_OF_TRAJECTORIES; ++i )
-    {
-        //std::fstream fStream( "res_5" + std::to_string( i ) + ".csv", std::ios::out );
-        trajectory_t tr = getTrajectory(
-                    0,
-                    2,
-                    a_func,
-                    b_func,
-                    pow( x0, n_param ),
-                    10000
-                    );
-        trajectories[(i-1) % 1000] = tr;
-        if( i > 0 && !(i % 1000) )
-            getMeanTrajectory( trajectories, means[ i / 1000 - 1] );
-
-        //writeTrajextoryToStream( tr, fStream );
-    }
-
-    trajectory_t mean( 10000 );
-    getMeanTrajectory( means, mean );
-
-    std::fstream meanStr( "mean" + meanName + ".csv", std::ios::out );
-
-    writeTrajextoryToStream( mean, meanStr );
+		//std::fstream meanStr( "mean" + meanName + ".csv", std::ios::out );
+		
+		difference[curN].first = n_param;
+		
+		trajectory_t::value_type &point = *std::max_element(
+			mean.begin(),
+			mean.end(),
+			[&]( trajectory_t::value_type &point )
+			{
+				return fabs( point.second - pow(x0, n_param) * exp( point.first ) );
+			} );
+		
+		difference[curN].second = point.second - pow( x0, n_param ) * exp( - point.first );
+	}
+	
+	std::fstream diffStr( "difference.csv", std::ios::out );
+	
+    writeTrajextoryToStream( difference, diffStr );
 
     return EXIT_SUCCESS;
 }
