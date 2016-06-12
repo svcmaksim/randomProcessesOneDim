@@ -145,9 +145,10 @@ int main( int argc, char** argv )
 		trajectory_t::value_type &point = *std::max_element(
 			mean.begin(),
 			mean.end(),
-			[&]( trajectory_t::value_type &point )
+            [&]( trajectory_t::value_type &pointFst, trajectory_t::value_type &pointSnd )
 			{
-				return fabs( point.second - pow(x0, n_param) * exp( point.first ) );
+                return fabs( pointFst.second - pow(x0, n_param) * exp( pointFst.first ) ) -
+                    fabs( pointSnd.second - pow(x0, n_param) * exp( pointSnd.first ) );
 			} );
 		
 		difference[curN].second = point.second - pow( x0, n_param ) * exp( - point.first );
