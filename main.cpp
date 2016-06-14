@@ -45,6 +45,9 @@ trajectory_t getTrajectory(
 
         double epsilon = normalSampler();
 
+        if( answer[i].second < 0 )
+            answer[i].second = 0;
+
         answer[i].first = curT;
         answer[i].second =
                 answer[i - 1].second +
@@ -149,7 +152,7 @@ int main( int argc, char** argv )
 			{
                 /*return fabs( pow( pointFst.second, n_param ) - pow(x0, n_param) * exp( pointFst.first ) ) -
                     fabs( pow( pointSnd.second, n_param ) - pow(x0, n_param) * exp( pointSnd.first ) );*/
-					return fabs( pointFst.second - pow(x0, n_param) * exp( -pointFst.first ) ) -
+                    return fabs( pointFst.second - pow(x0, n_param) * exp( -pointFst.first ) ) <
                     fabs( pointSnd.second - pow(x0, n_param) * exp( -pointSnd.first ) );
 			} );
 		
