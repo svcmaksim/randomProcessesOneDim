@@ -69,9 +69,9 @@ void getMeanTrajectory( const std::vector<trajectory_t> &trajectories, trajector
     for( size_t i = 0; i < mean.size(); ++i )
     {
         mean[i].second = 0;
+		mean[i].first = trajectories[0][i].first;
         for( size_t j = 0; j < trajectories.size(); ++j )
         {
-            mean[i].first = trajectories[j][i].first;
             mean[i].second += pow( trajectories[j][i].second, n_param ) / trajectories.size();
         }
     }
@@ -93,7 +93,7 @@ int main( int argc, char** argv )
     //std::cout << "x0 = " << x0 << "\t n = " << n_param << std::endl;
     const size_t NUM_OF_TRAJECTORIES = 1000;
 	double_t n_param_begin = 1.;
-	double_t n_param_end = 7.;
+	double_t n_param_end = 3.2;
 	size_t numExperiments = 100;
 	double_t n_param = n_param_begin;	
 	const double_t x0 = 1.5;	
@@ -129,8 +129,8 @@ int main( int argc, char** argv )
 						10000
 						);
 			trajectories[(i-1) % 1000] = tr;
-			if( i > 0 && !(i % 1000) )
-				getMeanTrajectory( trajectories, means[ i / 1000 - 1] );
+			if( !(i % 1000) )
+				getMeanTrajectory( trajectories, means[ i / 1000 - 1], n_param );
 
 			//writeTrajextoryToStream( tr, fStream );
 		}
