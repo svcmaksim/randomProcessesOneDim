@@ -91,7 +91,7 @@ int main( int argc, char** argv )
     //    throw std::logic_error( "number of trajectories must has 1000 as devide" );
 
     //std::cout << "x0 = " << x0 << "\t n = " << n_param << std::endl;
-	const size_t NUM_OF_TRAJECTORIES = 10000;
+	const size_t NUM_OF_TRAJECTORIES = 5000;
 	double_t n_param_begin = 1.;
 	double_t n_param_end = 7.;
 	size_t numExperiments = 100;
