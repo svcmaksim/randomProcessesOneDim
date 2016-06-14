@@ -147,11 +147,11 @@ int main( int argc, char** argv )
 			mean.end(),
             [&]( trajectory_t::value_type &pointFst, trajectory_t::value_type &pointSnd )
 			{
-                return fabs( pointFst.second - pow(x0, n_param) * exp( pointFst.first ) ) -
-                    fabs( pointSnd.second - pow(x0, n_param) * exp( pointSnd.first ) );
+                return fabs( pow( pointFst.second, n_param ) - pow(x0, n_param) * exp( pointFst.first ) ) -
+                    fabs( pow( pointSnd.second, n_param ) - pow(x0, n_param) * exp( pointSnd.first ) );
 			} );
 		
-		difference[curN].second = point.second - pow( x0, n_param ) * exp( - point.first );
+		difference[curN].second = pow( point.second, n_param ) - pow( x0, n_param ) * exp( - point.first );
 	}
 	
 	std::fstream diffStr( "difference.csv", std::ios::out );

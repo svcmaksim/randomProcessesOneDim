@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1366740,      22748]
-NotebookOptionsPosition[   1365243,      22695]
-NotebookOutlinePosition[   1365618,      22711]
-CellTagsIndexPosition[   1365575,      22708]
+NotebookDataLength[   1372276,      22893]
+NotebookOptionsPosition[   1370779,      22840]
+NotebookOutlinePosition[   1371154,      22856]
+CellTagsIndexPosition[   1371111,      22853]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -47,13 +47,21 @@ sampleProcess\\\\sampleProcess\\\\mean1.csv\>\"", "]"}]}],
      RowBox[{"PlotStyle", "\[Rule]", 
       RowBox[{"Directive", "[", 
        RowBox[{"Dashed", ",", 
-        RowBox[{"Thickness", "[", "0.003", "]"}]}], "]"}]}]}], "]"}]}], 
-  "]"}]}], "Input",
+        RowBox[{"Thickness", "[", "0.003", "]"}]}], "]"}]}]}], "]"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<t\>\"", ",", "Bold", ",", "Black"}], "]"}], ",", " ", 
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<M[X]\>\"", ",", "Bold", ",", "Black"}], "]"}]}], 
+     "}"}]}]}], "]"}]}], "Input",
  CellChangeTimes->{{3.673674302509807*^9, 3.6736743340005283`*^9}, {
   3.673674373887602*^9, 3.673674383605856*^9}, {3.673675742256942*^9, 
   3.673675820581872*^9}, {3.674587166437357*^9, 3.6745872163412113`*^9}, {
   3.674587248174032*^9, 3.6745873470876894`*^9}, {3.674587405283346*^9, 
-  3.674587421952383*^9}, {3.674646260734494*^9, 3.6746462659677935`*^9}}],
+  3.674587421952383*^9}, {3.674646260734494*^9, 3.6746462659677935`*^9}, {
+  3.674835903024232*^9, 3.6748359217763042`*^9}}],
 
 Cell[BoxData[
  GraphicsBox[{{{}, {{}, {}, 
@@ -2725,7 +2733,13 @@ AoVra9VnCSEwOR2moiB/gf8AZsVxIw==
       "]]}}},
   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
   Axes->{True, True},
-  AxesLabel->{None, None},
+  AxesLabel->{
+    FormBox[
+     StyleBox["\"t\"", Bold, 
+      GrayLevel[0], StripOnInput -> False], TraditionalForm], 
+    FormBox[
+     StyleBox["\"M[X]\"", Bold, 
+      GrayLevel[0], StripOnInput -> False], TraditionalForm]},
   AxesOrigin->{0, 0},
   DisplayFunction->Identity,
   Frame->{{False, False}, {False, False}},
@@ -2749,7 +2763,7 @@ AoVra9VnCSEwOR2moiB/gf8AZsVxIw==
    3.673674963146862*^9}, {3.673675822689334*^9, 3.6736758473723392`*^9}, 
    3.673675917873621*^9, 3.673676084001495*^9, 3.6736761593956842`*^9, 
    3.6745874438054323`*^9, 3.674637279862379*^9, 3.67464626853294*^9, 
-   3.6746475080518365`*^9}]
+   3.6746475080518365`*^9, 3.6748359243484516`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2781,13 +2795,20 @@ sampleProcess\\\\sampleProcess\\\\mean2.csv\>\"", "]"}]}],
      RowBox[{"PlotStyle", "\[Rule]", 
       RowBox[{"Directive", "[", 
        RowBox[{"Dashed", ",", 
-        RowBox[{"Thickness", "[", "0.003", "]"}]}], "]"}]}]}], "]"}]}], 
-  "]"}]}], "Input",
+        RowBox[{"Thickness", "[", "0.003", "]"}]}], "]"}]}]}], "]"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<t\>\"", ",", "Bold", ",", "Black"}], "]"}], ",", " ", 
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<M[X]\>\"", ",", "Bold", ",", "Black"}], "]"}]}], 
+     "}"}]}]}], "]"}]}], "Input",
  CellChangeTimes->{{3.673674483676386*^9, 3.6736745086127663`*^9}, {
-  3.673674685854937*^9, 3.673674688313739*^9}, {3.6736762514619102`*^9, 
-  3.673676280367791*^9}, {3.6736763829345093`*^9, 3.673676393944656*^9}, {
-  3.6745874706555157`*^9, 3.6745875583696723`*^9}, {3.6746462816706915`*^9, 
-  3.674646291565257*^9}}],
+   3.673674685854937*^9, 3.673674688313739*^9}, {3.6736762514619102`*^9, 
+   3.673676280367791*^9}, {3.6736763829345093`*^9, 3.673676393944656*^9}, {
+   3.6745874706555157`*^9, 3.6745875583696723`*^9}, {3.6746462816706915`*^9, 
+   3.674646291565257*^9}, 3.674835940788392*^9}],
 
 Cell[BoxData[
  GraphicsBox[{{{}, {{}, {}, 
@@ -5451,7 +5472,13 @@ cWO15iQhBI7jqzhKjVz8C/2bezA=
       "]]}}},
   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
   Axes->{True, True},
-  AxesLabel->{None, None},
+  AxesLabel->{
+    FormBox[
+     StyleBox["\"t\"", Bold, 
+      GrayLevel[0], StripOnInput -> False], TraditionalForm], 
+    FormBox[
+     StyleBox["\"M[X]\"", Bold, 
+      GrayLevel[0], StripOnInput -> False], TraditionalForm]},
   AxesOrigin->{0, 0},
   DisplayFunction->Identity,
   Frame->{{False, False}, {False, False}},
@@ -5474,7 +5501,7 @@ cWO15iQhBI7jqzhKjVz8C/2bezA=
   3.673674511669176*^9, {3.673674674941146*^9, 3.67367469016645*^9}, 
    3.67367628348587*^9, {3.67367639038794*^9, 3.673676398318845*^9}, {
    3.6745875519716606`*^9, 3.674587560632677*^9}, 3.674637280321405*^9, 
-   3.674646294184407*^9}]
+   3.674646294184407*^9, 3.67483594319553*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -5506,12 +5533,20 @@ sampleProcess\\\\sampleProcess\\\\mean3.csv\>\"", "]"}]}],
      RowBox[{"PlotStyle", "\[Rule]", 
       RowBox[{"Directive", "[", 
        RowBox[{"Dashed", ",", 
-        RowBox[{"Thickness", "[", "0.003", "]"}]}], "]"}]}]}], "]"}]}], 
-  "]"}]}], "Input",
+        RowBox[{"Thickness", "[", "0.003", "]"}]}], "]"}]}]}], "]"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<t\>\"", ",", "Bold", ",", "Black"}], "]"}], ",", " ", 
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<M[X]\>\"", ",", "Bold", ",", "Black"}], "]"}]}], 
+     "}"}]}]}], "]"}]}], "Input",
  CellChangeTimes->{
   3.673674655682642*^9, {3.673674725775152*^9, 3.6736747438124523`*^9}, {
    3.673676300995323*^9, 3.6736763295630903`*^9}, {3.6745875876337247`*^9, 
-   3.6745876441388364`*^9}, {3.6746462989616804`*^9, 3.6746463048690186`*^9}}],
+   3.6745876441388364`*^9}, {3.6746462989616804`*^9, 3.6746463048690186`*^9}, 
+   3.6748359471947584`*^9}],
 
 Cell[BoxData[
  GraphicsBox[{{{}, {{}, {}, 
@@ -8150,7 +8185,13 @@ uKlJnySEII2TKC9zgcJ/YP6Aig==
       "]]}}},
   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
   Axes->{True, True},
-  AxesLabel->{None, None},
+  AxesLabel->{
+    FormBox[
+     StyleBox["\"t\"", Bold, 
+      GrayLevel[0], StripOnInput -> False], TraditionalForm], 
+    FormBox[
+     StyleBox["\"M[X]\"", Bold, 
+      GrayLevel[0], StripOnInput -> False], TraditionalForm]},
   AxesOrigin->{0, 0},
   DisplayFunction->Identity,
   Frame->{{False, False}, {False, False}},
@@ -8159,7 +8200,7 @@ uKlJnySEII2TKC9zgcJ/YP6Aig==
   GridLines->{None, None},
   GridLinesStyle->Directive[
     GrayLevel[0.5, 0.4]],
-  ImageSize->{797.0370370370359, Automatic},
+  ImageSize->{761.4814814814803, Automatic},
   Method->{},
   PlotRange->{{0, 2.}, {0, 2.25}},
   PlotRangeClipping->True,
@@ -8170,7 +8211,8 @@ uKlJnySEII2TKC9zgcJ/YP6Aig==
      Scaled[0.05]}},
   Ticks->{Automatic, Automatic}]], "Output",
  CellChangeTimes->{3.6736747464456253`*^9, 3.6736764620078087`*^9, 
-  3.674587647976843*^9, 3.6746372806104217`*^9, 3.6746463066831217`*^9}]
+  3.674587647976843*^9, 3.6746372806104217`*^9, 3.6746463066831217`*^9, 
+  3.6748359488408527`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -8202,11 +8244,19 @@ sampleProcess\\\\sampleProcess\\\\mean4.csv\>\"", "]"}]}],
      RowBox[{"PlotStyle", "\[Rule]", 
       RowBox[{"Directive", "[", 
        RowBox[{"Dashed", ",", 
-        RowBox[{"Thickness", "[", "0.003", "]"}]}], "]"}]}]}], "]"}]}], 
-  "]"}]}], "Input",
+        RowBox[{"Thickness", "[", "0.003", "]"}]}], "]"}]}]}], "]"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<t\>\"", ",", "Bold", ",", "Black"}], "]"}], ",", " ", 
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<M[X]\>\"", ",", "Bold", ",", "Black"}], "]"}]}], 
+     "}"}]}]}], "]"}]}], "Input",
  CellChangeTimes->{{3.673674814937298*^9, 3.673674874288005*^9}, {
-  3.673676533965721*^9, 3.67367658223853*^9}, {3.6745876599878654`*^9, 
-  3.674587683597908*^9}, {3.674646315751641*^9, 3.6746463476844673`*^9}}],
+   3.673676533965721*^9, 3.67367658223853*^9}, {3.6745876599878654`*^9, 
+   3.674587683597908*^9}, {3.674646315751641*^9, 3.6746463476844673`*^9}, 
+   3.6748359529980907`*^9}],
 
 Cell[BoxData[
  GraphicsBox[{{{}, {{}, {}, 
@@ -10762,7 +10812,13 @@ V2pPEELAsrrOpbqF+BdlfnsW
       "]]}}},
   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
   Axes->{True, True},
-  AxesLabel->{None, None},
+  AxesLabel->{
+    FormBox[
+     StyleBox["\"t\"", Bold, 
+      GrayLevel[0], StripOnInput -> False], TraditionalForm], 
+    FormBox[
+     StyleBox["\"M[X]\"", Bold, 
+      GrayLevel[0], StripOnInput -> False], TraditionalForm]},
   AxesOrigin->{0, 0},
   DisplayFunction->Identity,
   Frame->{{False, False}, {False, False}},
@@ -10771,7 +10827,7 @@ V2pPEELAsrrOpbqF+BdlfnsW
   GridLines->{None, None},
   GridLinesStyle->Directive[
     GrayLevel[0.5, 0.4]],
-  ImageSize->{759.9999999999995, Automatic},
+  ImageSize->{505.1851851851841, Automatic},
   Method->{},
   PlotRange->{{0, 2.}, {0, 2.75568}},
   PlotRangeClipping->True,
@@ -10783,7 +10839,7 @@ V2pPEELAsrrOpbqF+BdlfnsW
   Ticks->{Automatic, Automatic}]], "Output",
  CellChangeTimes->{{3.673674847692307*^9, 3.673674876220027*^9}, 
    3.673676627521368*^9, 3.674587688807917*^9, 3.6746372808864374`*^9, 
-   3.6746463509236526`*^9}]
+   3.6746463509236526`*^9, 3.674835954257162*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -10815,11 +10871,18 @@ sampleProcess\\\\sampleProcess\\\\mean5.csv\>\"", "]"}]}],
      RowBox[{"PlotStyle", "\[Rule]", 
       RowBox[{"Directive", "[", 
        RowBox[{"Dashed", ",", 
-        RowBox[{"Thickness", "[", "0.003", "]"}]}], "]"}]}]}], "]"}]}], 
-  "]"}]}], "Input",
+        RowBox[{"Thickness", "[", "0.003", "]"}]}], "]"}]}]}], "]"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<t\>\"", ",", "Bold", ",", "Black"}], "]"}], ",", " ", 
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<M[X]\>\"", ",", "Bold", ",", "Black"}], "]"}]}], 
+     "}"}]}]}], "]"}]}], "Input",
  CellChangeTimes->{{3.673677499901197*^9, 3.6736774999416113`*^9}, {
-  3.674637292134081*^9, 3.6746373103501225`*^9}, {3.67464635840108*^9, 
-  3.674646365755501*^9}}],
+   3.674637292134081*^9, 3.6746373103501225`*^9}, {3.67464635840108*^9, 
+   3.674646365755501*^9}, 3.674835962047608*^9}],
 
 Cell[BoxData[
  GraphicsBox[{{{}, {{}, {}, 
@@ -13174,7 +13237,13 @@ X1VCCMEv5b4qMbY0/gV4k32A
       "]]}}},
   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
   Axes->{True, True},
-  AxesLabel->{None, None},
+  AxesLabel->{
+    FormBox[
+     StyleBox["\"t\"", Bold, 
+      GrayLevel[0], StripOnInput -> False], TraditionalForm], 
+    FormBox[
+     StyleBox["\"M[X]\"", Bold, 
+      GrayLevel[0], StripOnInput -> False], TraditionalForm]},
   AxesOrigin->{0, 0},
   DisplayFunction->Identity,
   Frame->{{False, False}, {False, False}},
@@ -13183,7 +13252,7 @@ X1VCCMEv5b4qMbY0/gV4k32A
   GridLines->{None, None},
   GridLinesStyle->Directive[
     GrayLevel[0.5, 0.4]],
-  ImageSize->{747.4074074074074, Automatic},
+  ImageSize->{528.1481481481477, Automatic},
   Method->{},
   PlotRange->{{0, 2.}, {0, 3.375}},
   PlotRangeClipping->True,
@@ -13193,7 +13262,8 @@ X1VCCMEv5b4qMbY0/gV4k32A
      Scaled[0.02], 
      Scaled[0.05]}},
   Ticks->{Automatic, Automatic}]], "Output",
- CellChangeTimes->{3.6746373196336536`*^9, 3.674646370097749*^9}]
+ CellChangeTimes->{3.6746373196336536`*^9, 3.674646370097749*^9, 
+  3.674835963447688*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -13225,9 +13295,17 @@ sampleProcess\\\\sampleProcess\\\\mean6.csv\>\"", "]"}]}],
      RowBox[{"PlotStyle", "\[Rule]", 
       RowBox[{"Directive", "[", 
        RowBox[{"Dashed", ",", 
-        RowBox[{"Thickness", "[", "0.003", "]"}]}], "]"}]}]}], "]"}]}], 
-  "]"}]}], "Input",
- CellChangeTimes->{{3.674648087355971*^9, 3.674648096728507*^9}}],
+        RowBox[{"Thickness", "[", "0.003", "]"}]}], "]"}]}]}], "]"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<t\>\"", ",", "Bold", ",", "Black"}], "]"}], ",", " ", 
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<M[X]\>\"", ",", "Bold", ",", "Black"}], "]"}]}], 
+     "}"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.674648087355971*^9, 3.674648096728507*^9}, 
+   3.674835967283908*^9}],
 
 Cell[BoxData[
  GraphicsBox[{{{}, {{}, {}, 
@@ -15586,7 +15664,13 @@ xrSLw2LcN1Ifo5TCuc5+dqJEjP8AysVy1Q==
       "]]}}},
   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
   Axes->{True, True},
-  AxesLabel->{None, None},
+  AxesLabel->{
+    FormBox[
+     StyleBox["\"t\"", Bold, 
+      GrayLevel[0], StripOnInput -> False], TraditionalForm], 
+    FormBox[
+     StyleBox["\"M[X]\"", Bold, 
+      GrayLevel[0], StripOnInput -> False], TraditionalForm]},
   AxesOrigin->{0, 0},
   DisplayFunction->Identity,
   Frame->{{False, False}, {False, False}},
@@ -15605,7 +15689,7 @@ xrSLw2LcN1Ifo5TCuc5+dqJEjP8AysVy1Q==
      Scaled[0.02], 
      Scaled[0.05]}},
   Ticks->{Automatic, Automatic}]], "Output",
- CellChangeTimes->{3.674648098580613*^9}]
+ CellChangeTimes->{3.674648098580613*^9, 3.67483596854198*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -15637,9 +15721,17 @@ sampleProcess\\\\sampleProcess\\\\mean7.csv\>\"", "]"}]}],
      RowBox[{"PlotStyle", "\[Rule]", 
       RowBox[{"Directive", "[", 
        RowBox[{"Dashed", ",", 
-        RowBox[{"Thickness", "[", "0.003", "]"}]}], "]"}]}]}], "]"}]}], 
-  "]"}]}], "Input",
- CellChangeTimes->{{3.6746511493411064`*^9, 3.67465117650766*^9}}],
+        RowBox[{"Thickness", "[", "0.003", "]"}]}], "]"}]}]}], "]"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<t\>\"", ",", "Bold", ",", "Black"}], "]"}], ",", " ", 
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<M[X]\>\"", ",", "Bold", ",", "Black"}], "]"}]}], 
+     "}"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6746511493411064`*^9, 3.67465117650766*^9}, 
+   3.674835971790165*^9}],
 
 Cell[BoxData[
  GraphicsBox[{{{}, {{}, {}, 
@@ -18002,7 +18094,13 @@ rd8WJxUO3szppaMJGNyz1lfiOA47w3grki5g8B8ARWQC
       "]]}}},
   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
   Axes->{True, True},
-  AxesLabel->{None, None},
+  AxesLabel->{
+    FormBox[
+     StyleBox["\"t\"", Bold, 
+      GrayLevel[0], StripOnInput -> False], TraditionalForm], 
+    FormBox[
+     StyleBox["\"M[X]\"", Bold, 
+      GrayLevel[0], StripOnInput -> False], TraditionalForm]},
   AxesOrigin->{0, 0},
   DisplayFunction->Identity,
   Frame->{{False, False}, {False, False}},
@@ -18011,7 +18109,7 @@ rd8WJxUO3szppaMJGNyz1lfiOA47w3grki5g8B8ARWQC
   GridLines->{None, None},
   GridLinesStyle->Directive[
     GrayLevel[0.5, 0.4]],
-  ImageSize->{635.5555555555551, Automatic},
+  ImageSize->{502.9629629629626, Automatic},
   Method->{},
   PlotRange->{{0, 2.}, {0, 7.59375}},
   PlotRangeClipping->True,
@@ -18021,7 +18119,7 @@ rd8WJxUO3szppaMJGNyz1lfiOA47w3grki5g8B8ARWQC
      Scaled[0.02], 
      Scaled[0.05]}},
   Ticks->{Automatic, Automatic}]], "Output",
- CellChangeTimes->{3.6746511785627775`*^9}]
+ CellChangeTimes->{3.6746511785627775`*^9, 3.6748359736112695`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -18063,9 +18161,17 @@ sampleProcess\\\\sampleProcess\\\\mean8.csv\>\"", "]"}]}],
       RowBox[{"{", 
        RowBox[{"All", ",", 
         RowBox[{"{", 
-         RowBox[{"0", ",", "12"}], "}"}]}], "}"}]}]}], "]"}]}], 
-  "]"}]}], "Input",
- CellChangeTimes->{{3.674651190157441*^9, 3.6746512847808533`*^9}}],
+         RowBox[{"0", ",", "12"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<t\>\"", ",", "Bold", ",", "Black"}], "]"}], ",", " ", 
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<M[X]\>\"", ",", "Bold", ",", "Black"}], "]"}]}], 
+     "}"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.674651190157441*^9, 3.6746512847808533`*^9}, 
+   3.674835977329482*^9}],
 
 Cell[BoxData[
  GraphicsBox[{{{}, {{}, {}, 
@@ -20360,7 +20466,13 @@ H6iBX+K5Zu0MhkFJL5lYpIYsS30Vxhh8abQFjnfV8B8A4Gan
       "]]}}},
   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
   Axes->{True, True},
-  AxesLabel->{None, None},
+  AxesLabel->{
+    FormBox[
+     StyleBox["\"t\"", Bold, 
+      GrayLevel[0], StripOnInput -> False], TraditionalForm], 
+    FormBox[
+     StyleBox["\"M[X]\"", Bold, 
+      GrayLevel[0], StripOnInput -> False], TraditionalForm]},
   AxesOrigin->{0, 0},
   DisplayFunction->Identity,
   Frame->{{False, False}, {False, False}},
@@ -20369,7 +20481,7 @@ H6iBX+K5Zu0MhkFJL5lYpIYsS30Vxhh8abQFjnfV8B8A4Gan
   GridLines->{None, None},
   GridLinesStyle->Directive[
     GrayLevel[0.5, 0.4]],
-  ImageSize->{613.3333333333328, Automatic},
+  ImageSize->{525.1851851851847, Automatic},
   Method->{},
   PlotRange->{{0, 2.}, {0, 12}},
   PlotRangeClipping->True,
@@ -20378,7 +20490,8 @@ H6iBX+K5Zu0MhkFJL5lYpIYsS30Vxhh8abQFjnfV8B8A4Gan
      Scaled[0.02]}, {0, 0}},
   Ticks->{Automatic, Automatic}]], "Output",
  CellChangeTimes->{
-  3.674651204743275*^9, {3.674651248381771*^9, 3.6746512860349245`*^9}}]
+  3.674651204743275*^9, {3.674651248381771*^9, 3.6746512860349245`*^9}, 
+   3.674835979420602*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -20420,9 +20533,17 @@ sampleProcess\\\\sampleProcess\\\\mean9.csv\>\"", "]"}]}],
       RowBox[{"{", 
        RowBox[{"All", ",", 
         RowBox[{"{", 
-         RowBox[{"0", ",", "20"}], "}"}]}], "}"}]}]}], "]"}]}], 
-  "]"}]}], "Input",
- CellChangeTimes->{{3.674651297000552*^9, 3.6746513240811005`*^9}}],
+         RowBox[{"0", ",", "20"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<t\>\"", ",", "Bold", ",", "Black"}], "]"}], ",", " ", 
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<M[X]\>\"", ",", "Bold", ",", "Black"}], "]"}]}], 
+     "}"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.674651297000552*^9, 3.6746513240811005`*^9}, 
+   3.674835984569896*^9}],
 
 Cell[BoxData[
  GraphicsBox[{{{}, {{}, {}, 
@@ -22602,7 +22723,13 @@ tLuk0wSIxzb3omQK81pahGmfCbx0eMEIvkZhjlNakP88gds/9MWtT6AwS8Kz
       "]]}}},
   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
   Axes->{True, True},
-  AxesLabel->{None, None},
+  AxesLabel->{
+    FormBox[
+     StyleBox["\"t\"", Bold, 
+      GrayLevel[0], StripOnInput -> False], TraditionalForm], 
+    FormBox[
+     StyleBox["\"M[X]\"", Bold, 
+      GrayLevel[0], StripOnInput -> False], TraditionalForm]},
   AxesOrigin->{0, 0},
   DisplayFunction->Identity,
   Frame->{{False, False}, {False, False}},
@@ -22619,7 +22746,7 @@ tLuk0wSIxzb3omQK81pahGmfCbx0eMEIvkZhjlNakP88gds/9MWtT6AwS8Kz
      Scaled[0.02], 
      Scaled[0.02]}, {0, 0}},
   Ticks->{Automatic, Automatic}]], "Output",
- CellChangeTimes->{3.6746513250431557`*^9}]
+ CellChangeTimes->{3.6746513250431557`*^9, 3.674835985837969*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -22633,8 +22760,19 @@ Cell[BoxData[{
 \:0441\\\\\:0414\:0438\:043f\:043b\:043e\:043c\\\\coding\\\\17.05.2016\\\\\
 sampleProcess\\\\sampleProcess\\\\difference.csv\>\"", "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
- RowBox[{"ListLinePlot", "[", "diff", "]"}]}], "Input",
- CellChangeTimes->{{3.674743686153515*^9, 3.6747437304390483`*^9}}],
+ RowBox[{"ListLinePlot", "[", 
+  RowBox[{"diff", ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<n param\>\"", ",", "Bold", ",", "Black"}], "]"}], ",", 
+      " ", 
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<difference\>\"", ",", "Bold", ",", "Black"}], "]"}]}], 
+     "}"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.674743686153515*^9, 3.6747437304390483`*^9}, {
+  3.6748356893060083`*^9, 3.6748357496814613`*^9}}],
 
 Cell[BoxData[
  GraphicsBox[{{}, {{}, {}, 
@@ -22671,7 +22809,13 @@ FfPww7VsfaTZXc08/NDRqzlhPaRmHn4om9q+//QmP+bhh4ySzf0nQ8bjfxzT
       "]]}}, {}},
   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
   Axes->{True, True},
-  AxesLabel->{None, None},
+  AxesLabel->{
+    FormBox[
+     StyleBox["\"n param\"", Bold, 
+      GrayLevel[0], StripOnInput -> False], TraditionalForm], 
+    FormBox[
+     StyleBox["\"difference\"", Bold, 
+      GrayLevel[0], StripOnInput -> False], TraditionalForm]},
   AxesOrigin->{0, 0},
   DisplayFunction->Identity,
   Frame->{{False, False}, {False, False}},
@@ -22690,7 +22834,8 @@ FfPww7VsfaTZXc08/NDRqzlhPaRmHn4om9q+//QmP+bhh4ySzf0nQ8bjfxzT
      Scaled[0.05], 
      Scaled[0.05]}},
   Ticks->{Automatic, Automatic}]], "Output",
- CellChangeTimes->{3.6747437316491175`*^9}]
+ CellChangeTimes->{
+  3.6747437316491175`*^9, {3.6748356865168486`*^9, 3.674835750492508*^9}}]
 }, Open  ]]
 },
 WindowSize->{1366, 726},
@@ -22711,44 +22856,44 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 1344, 33, 129, "Input"],
-Cell[1927, 57, 163527, 2694, 623, "Output"]
+Cell[580, 22, 1683, 41, 158, "Input"],
+Cell[2266, 65, 163754, 2700, 637, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[165491, 2756, 1306, 33, 129, "Input"],
-Cell[166800, 2791, 162962, 2685, 641, "Output"]
+Cell[166057, 2770, 1620, 40, 158, "Input"],
+Cell[167680, 2812, 163186, 2691, 655, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[329799, 5481, 1231, 32, 129, "Input"],
-Cell[331033, 5515, 161340, 2657, 691, "Output"]
+Cell[330903, 5508, 1547, 40, 158, "Input"],
+Cell[332453, 5550, 161570, 2664, 675, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[492410, 8177, 1199, 31, 129, "Input"],
-Cell[493612, 8210, 156293, 2575, 660, "Output"]
+Cell[494060, 8219, 1517, 39, 158, "Input"],
+Cell[495580, 8260, 156518, 2581, 461, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[649942, 10790, 1149, 31, 129, "Input"],
-Cell[651094, 10823, 143954, 2372, 649, "Output"]
+Cell[652135, 10846, 1461, 38, 158, "Input"],
+Cell[653599, 10886, 144182, 2379, 480, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[795085, 13200, 1048, 29, 129, "Input"],
-Cell[796136, 13231, 144143, 2376, 587, "Output"]
+Cell[797818, 13270, 1362, 37, 158, "Input"],
+Cell[799183, 13309, 144367, 2382, 601, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[940316, 15612, 1049, 29, 129, "Input"],
-Cell[941368, 15643, 144418, 2380, 567, "Output"]
+Cell[943587, 15696, 1363, 37, 158, "Input"],
+Cell[944953, 15735, 144645, 2386, 464, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1085823, 18028, 1384, 39, 129, "Input"],
-Cell[1087210, 18069, 140300, 2311, 558, "Output"]
+Cell[1089635, 18126, 1698, 47, 158, "Input"],
+Cell[1091336, 18175, 140529, 2318, 489, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1227547, 20385, 1384, 39, 129, "Input"],
-Cell[1228934, 20426, 133232, 2195, 561, "Output"]
+Cell[1231902, 20498, 1698, 47, 158, "Input"],
+Cell[1233603, 20547, 133457, 2201, 567, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1362203, 22626, 453, 10, 98, "Input"],
-Cell[1362659, 22638, 2568, 54, 562, "Output"]
+Cell[1367097, 22753, 829, 21, 98, "Input"],
+Cell[1367929, 22776, 2834, 61, 499, "Output"]
 }, Open  ]]
 }
 ]
