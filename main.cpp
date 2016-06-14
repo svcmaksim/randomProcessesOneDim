@@ -93,7 +93,7 @@ int main( int argc, char** argv )
     //std::cout << "x0 = " << x0 << "\t n = " << n_param << std::endl;
     const size_t NUM_OF_TRAJECTORIES = 1000;
 	double_t n_param_begin = 1.;
-	double_t n_param_end = 3.2;
+    double_t n_param_end = 3.;
 	size_t numExperiments = 100;
 	double_t n_param = n_param_begin;	
 	const double_t x0 = 1.5;	
@@ -112,7 +112,7 @@ int main( int argc, char** argv )
 	
 	for( size_t curN = 0; curN < numExperiments; ++curN )
 	{
-		n_param = n_param_begin + (n_param_end - n_param_begin) / numExperiments * curN;
+        n_param = n_param_begin + (n_param_end - n_param_begin) / (numExperiments - 1) * curN;
 		
 		std::vector<trajectory_t> trajectories(1000);
 		std::vector<trajectory_t> means( NUM_OF_TRAJECTORIES / 1000, trajectory_t( 1000 ) );
