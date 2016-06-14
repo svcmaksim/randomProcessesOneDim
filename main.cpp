@@ -64,7 +64,7 @@ void writeTrajextoryToStream( trajectory_t &tr, std::ostream &str )
                tr[i].second << std::endl;
 }
 
-void getMeanTrajectory( const std::vector<trajectory_t> &trajectories, trajectory_t &mean )
+void getMeanTrajectory( const std::vector<trajectory_t> &trajectories, trajectory_t &mean, double_t n_param )
 {
     for( size_t i = 0; i < mean.size(); ++i )
     {
@@ -72,7 +72,7 @@ void getMeanTrajectory( const std::vector<trajectory_t> &trajectories, trajector
         for( size_t j = 0; j < trajectories.size(); ++j )
         {
             mean[i].first = trajectories[j][i].first;
-            mean[i].second += trajectories[j][i].second / trajectories.size();
+            mean[i].second += pow( trajectories[j][i].second, n_param ) / trajectories.size();
         }
     }
 }
@@ -136,7 +136,7 @@ int main( int argc, char** argv )
 		}
 
 		trajectory_t mean( 10000 );
-		getMeanTrajectory( means, mean );
+		getMeanTrajectory( means, mean, n_param );
 
 		//std::fstream meanStr( "mean" + meanName + ".csv", std::ios::out );
 		
@@ -147,8 +147,10 @@ int main( int argc, char** argv )
 			mean.end(),
             [&]( trajectory_t::value_type &pointFst, trajectory_t::value_type &pointSnd )
 			{
-                return fabs( pow( pointFst.second, n_param ) - pow(x0, n_param) * exp( pointFst.first ) ) -
-                    fabs( pow( pointSnd.second, n_param ) - pow(x0, n_param) * exp( pointSnd.first ) );
+                /*return fabs( pow( pointFst.second, n_param ) - pow(x0, n_param) * exp( pointFst.first ) ) -
+                    fabs( pow( pointSnd.second, n_param ) - pow(x0, n_param) * exp( pointSnd.first ) );*/
+					return fabs( pointFst.second - pow(x0, n_param) * exp( pointFst.first ) ) -
+                    fabs( pointSnd.second - pow(x0, n_param) * exp( pointSnd.first ) );
 			} );
 		
 		difference[curN].second = pow( point.second, n_param ) - pow( x0, n_param ) * exp( - point.first );
