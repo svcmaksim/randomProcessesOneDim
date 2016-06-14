@@ -115,7 +115,7 @@ int main( int argc, char** argv )
 		n_param = n_param_begin + (n_param_end - n_param_begin) / numExperiments * curN;
 		
 		std::vector<trajectory_t> trajectories(1000);
-		std::vector<trajectory_t> means( NUM_OF_TRAJECTORIES / 1000, trajectory_t( 10000 ) );
+		std::vector<trajectory_t> means( NUM_OF_TRAJECTORIES / 1000, trajectory_t( 1000 ) );
 		
 		for( size_t i = 1; i <= NUM_OF_TRAJECTORIES; ++i )
 		{
@@ -126,7 +126,7 @@ int main( int argc, char** argv )
 						a_func,
 						b_func,
 						pow( x0, n_param ),
-						10000
+						1000
 						);
 			trajectories[(i-1) % 1000] = tr;
 			if( !(i % 1000) )
@@ -135,8 +135,8 @@ int main( int argc, char** argv )
 			//writeTrajextoryToStream( tr, fStream );
 		}
 
-		trajectory_t mean( 10000 );
-		getMeanTrajectory( means, mean, n_param );
+		trajectory_t mean( 1000 );
+		getMeanTrajectory( means, mean, 1 );
 
 		//std::fstream meanStr( "mean" + meanName + ".csv", std::ios::out );
 		
