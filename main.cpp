@@ -45,8 +45,8 @@ trajectory_t getTrajectory(
 
         double epsilon = normalSampler();
 
-        if( answer[i].second < 0 )
-            answer[i].second = 0;
+        /*if( answer[i].second < 0 )
+            answer[i].second = 0;*/
 
         answer[i].first = curT;
         answer[i].second =
@@ -96,8 +96,8 @@ int main( int argc, char** argv )
     //std::cout << "x0 = " << x0 << "\t n = " << n_param << std::endl;
     const size_t NUM_OF_TRAJECTORIES = 1000;
 	double_t n_param_begin = 1.;
-    double_t n_param_end = 3.;
-	size_t numExperiments = 100;
+    double_t n_param_end = 5.;
+    size_t numExperiments = 4;
 	double_t n_param = n_param_begin;	
 	const double_t x0 = 1.5;	
 	
